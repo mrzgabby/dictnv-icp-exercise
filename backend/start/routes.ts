@@ -4,6 +4,7 @@ import ApisController from 'App/Controllers/Http/ApisController';
 import UsersController from 'App/Controllers/Http/UsersController';
 
 import isAuth from 'App/Middleware/Auth';
+import FreedomWallsController from 'App/Controllers/Http/FreedomWallsController';
 
 const Route = Router();
 
@@ -17,6 +18,12 @@ const Route = Router();
 Route.get('/user/me', isAuth, UsersController.me);
 Route.post('/user/register', isAuth, UsersController.register);
 Route.post('/user/update', isAuth, UsersController.update);
+
+
+
+// Freedom Wall
+Route.post('/freedomwall/create', isAuth, FreedomWallsController.create);
+
 
 /*
 |--------------------------------------------------------------------------
