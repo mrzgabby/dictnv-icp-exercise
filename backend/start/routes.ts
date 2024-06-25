@@ -5,6 +5,7 @@ import UsersController from 'App/Controllers/Http/UsersController';
 
 import isAuth from 'App/Middleware/Auth';
 import FreedomWallsController from 'App/Controllers/Http/FreedomWallsController';
+import PhoneBookController from 'App/Controllers/Http/PhoneBookController';
 
 const Route = Router();
 
@@ -23,6 +24,10 @@ Route.post('/user/update', isAuth, UsersController.update);
 
 // Freedom Wall
 Route.post('/freedomwall/create', isAuth, FreedomWallsController.create);
+
+
+// Phone Book (FINAL OUTPUT)
+Route.post('/phonebook/addtocontacts', isAuth, PhoneBookController.addtocontacts);
 
 
 /*
